@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="initial-scale = 1.0, maximum-scale = 2.5, user-scalable = yes, width = device-width"
+    />
+    <style class="vjs-styles-dimensions">
+      .example-video-dimensions {
+        width: 100%;
+        height: 100%;
+      }
+      .example-video-dimensions.vjs-fluid {
+        padding-top: 0%;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <video
+        autoplay="yes"
+        preload="yes"
+        id="example-video"
+        class="video-js vjs-default-skin"
+        poster=""
+        controls
+      >
+        <source class="video-url" type="application/x-mpegURL" />
+        <script src="static/script.js"></script>
+      </video>
+    </div>
+    <link href="/static/play.css" rel="stylesheet" />
+    <script src="/static/video.js"></script>
+    <script src="/static/videojs-contrib-hls.js"></script>
+    <script src="/static/videojs.hotkeys.min.js"></script>
+    <script>
+      (function (window, videojs) {
+        var player = (window.player = videojs("example-video"));
+
+        // hook up the video switcher
+        var loadUrl = document.getElementById("load-url");
+        var url = document.getElementById("url");
+        loadUrl.addEventListener("submit", function (event) {
+          event.preventDefault();
+          player.src({
+            src: url.value,
+            type: "application/x-mpegURL",
+          });
+          return false;
+        });
+      })(window, window.videojs);
+    </script>
+    <script>
+      videojs("example-video").ready(function () {
+        this.hotkeys({
+          volumeStep: 0.1,
+          seekStep: 5,
+          enableModifiersForNumbers: false,
+        });
+      });
+    </script>
+  </body>
+</html>
