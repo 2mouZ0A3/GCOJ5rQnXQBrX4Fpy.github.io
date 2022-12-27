@@ -6459,7 +6459,6 @@
             var e = "file:" === window.location.protocol ? "https:" : "",
               n = {
                 bidding: "//ssl.p.jwpcdn.com/player/v/8.26.4/bidding.js",
-                jwpsrv: "//ssl.p.jwpcdn.com/player/v/8.26.4/jwpsrv.js",
                 dai: "//ssl.p.jwpcdn.com/player/v/8.26.4/dai.js",
                 vast: "//ssl.p.jwpcdn.com/player/v/8.26.4/vast.js",
                 googima: "//ssl.p.jwpcdn.com/player/v/8.26.4/googima.js",
