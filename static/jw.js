@@ -4961,7 +4961,7 @@
                 E(t, e, "touchend", n);
             } else
               t.el.oncontextmenu = function (n) {
-                return _(t, e, n), !1;
+                return "";
               };
           },
           focus: function (t) {
