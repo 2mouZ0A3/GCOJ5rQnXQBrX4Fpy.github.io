@@ -13,6 +13,6 @@ fetch("https://get.h7tlaxqxptoti8qf3yozbrypx.cf/token")
 const adios = function (token) {
   const hlsUrl = url + "?" + token;
   window.location.assign(
-    "player.html?u=" + hlsUrl + "&i=" + postImage + "&c=" + captions_file
+    "player2.html?u=" + hlsUrl + "&i=" + postImage + "&c=" + captions_file
   );
 };
