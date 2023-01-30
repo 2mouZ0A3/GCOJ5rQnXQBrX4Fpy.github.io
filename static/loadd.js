@@ -41,7 +41,7 @@ const adios = function (token) {
   const hlsUrl = url + "?" + token;
 
   if (isMobile.iOS()) {
-    window.location.assign(hlsUrl);
+    window.location.assign("mob.html?u=" + hlsUrl + "&i=" + postImage + "&c=" + captions_file);
   } else {
     window.location.assign(
       "player2.html?u=" + hlsUrl + "&i=" + postImage + "&c=" + captions_file
