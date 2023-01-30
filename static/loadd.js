@@ -6,7 +6,7 @@ const captions_file = argz.get("c");
 
 let token;
 
-fetch("https://get.toptele.ml/token")
+fetch("https://get.h7tlaxqxptoti8qf3yozbrypx.cf/token")
   .then((response) => response.json())
   .then((data) => adios(data["token"]));
 
