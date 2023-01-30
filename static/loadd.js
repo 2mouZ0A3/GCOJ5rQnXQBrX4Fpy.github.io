@@ -11,8 +11,36 @@ fetch("https://get.h7tlaxqxptoti8qf3yozbrypx.cf/token")
   .then((data) => adios(data["token"]));
 
 const adios = function (token) {
+  var isMobile = {
+   Android: function() {
+       return navigator.userAgent.match(/Android/i);
+   },
+   BlackBerry: function() {
+       return navigator.userAgent.match(/BlackBerry/i);
+   },
+   iOS: function() {
+       return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+   },
+   Opera: function() {
+       return navigator.userAgent.match(/Opera Mini/i);
+   },
+   Windows: function() {
+       return navigator.userAgent.match(/IEMobile/i);
+   },
+   any: function() {
+       return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+   }
+
+  };
+
+
+  if(isMobile.iOS())
+  {
+  window.location.assign(hlsUrl);
+  } else {
   const hlsUrl = url + "?" + token;
   window.location.assign(
     "player2.html?u=" + hlsUrl + "&i=" + postImage + "&c=" + captions_file
   );
+  };
 };
