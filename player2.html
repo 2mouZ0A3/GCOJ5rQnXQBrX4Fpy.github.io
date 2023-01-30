@@ -21,19 +21,30 @@
 </script>
 <html>
   <head>
-    <meta name="robots" content="none">
-      <meta name="referrer" content="no-referrer">      <meta name="theme-color" content="black">
-      <meta name="apple-mobile-web-app-status-bar-style" content="black">
-      <meta content="width=device-width, initial-scale=1" name="viewport">
-    <!-- <script src="/static/cookies.js"></script> -->
+    <meta name="robots" content="none" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="theme-color" content="black" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <script src="/static/cookies.js"></script>
   </head>
   <body bgcolor="black" style="margin: 0; overflow: hidden">
-    <script src="//ssl.p.jwpcdn.com/player/v/8.26.5/jwplayer.js"></script>
-      <script>jwplayer.key = "XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo"</script>
-      <script src="//cdn.jsdelivr.net/npm/p2p-media-loader-core@latest/build/p2p-media-loader-core.min.js"></script>
-      <script src="//cdn.jsdelivr.net/npm/p2p-media-loader-hlsjs@latest/build/p2p-media-loader-hlsjs.min.js"></script>
-      <script src="//cdn.jsdelivr.net/npm/hls.js@latest"></script>
-      <div id="player"></div>
+    <script type="text/javascript" src="/static/jw.js"></script>
+    <script>
+      jwplayer.key = "XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo";
+    </script>
+    <link rel="stylesheet" href="/static/play.css" />
+    <script src="//cdn.jsdelivr.net/npm/p2p-media-loader-core@latest/build/p2p-media-loader-core.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/p2p-media-loader-hlsjs@latest/build/p2p-media-loader-hlsjs.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script language="javascript">
+      document.write(
+        unescape(
+          "%3C%73%63%72%69%70%74%20%61%73%79%6E%63%3D%22%61%73%79%6E%63%22%20%64%61%74%61%2D%63%66%61%73%79%6E%63%3D%22%66%61%6C%73%65%22%20%73%72%63%3D%22%2F%2F%61%72%73%6E%69%76%79%72%2E%63%6F%6D%2F%31%3F%7A%3D%35%36%32%31%30%36%33%22%3E%3C%2F%73%63%72%69%70%74%3E"
+        )
+      );
+    </script>
+    <div id="player"></div>
     <script>
       const argz = new URLSearchParams(window.location.search);
 
@@ -41,15 +52,17 @@
       const postImage = argz.get("i");
       const captions_file = argz.get("c");
 
+      var engine = new p2pml.hlsjs.Engine();
       var player = jwplayer("player");
-         player.setup({
-         	file: url,
-         	height: "100%",
-         	width: "100%",
-         	cast:{},
-         	autostart: false
-         });
+      player.setup({
+        file: url,
+        image: postImage,
+        height: "100%",
+        width: "100%",
+        autostart: false,
+        cast: {},
+        aspectratio: "16:9",
+      });
     </script>
-    
   </body>
 </html>
