@@ -34,6 +34,7 @@
       <script src="//cdn.jsdelivr.net/npm/hls.js@latest"></script>
       <div id="player"></div>
       <script>
+        const argz = new URLSearchParams(window.location.search);
         const url = argz.get("u");
         const postImage = argz.get("i");
         const captions_file = argz.get("c");
