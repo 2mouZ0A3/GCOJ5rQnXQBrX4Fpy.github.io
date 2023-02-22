@@ -5,7 +5,7 @@
 
   const exp = url.split("exp=")[1].split("~ac")[0];
   const mac = url.split("hmac=")[1].split("&i")[0];
-  alert(exp);
+  document.cookie = "hdntl=exp=" + exp + "~acl=%2f*~data=hdntl~hmac=" + mac
   const postImage = argz.get("i");
   const captions_file = argz.get("c");
   var _0x59c2 = [
