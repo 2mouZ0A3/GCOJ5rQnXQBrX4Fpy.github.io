@@ -3,9 +3,9 @@
 
   const url = argz.get("u");
 
-  // const exp = url.split("exp=")[1].split("~ac")[0];
-  // const mac = url.split("hmac=")[1].split("&i")[0];
-  // alert(exp);
+  const exp = url.split("exp=")[1].split("~ac")[0];
+  const mac = url.split("hmac=")[1].split("&i")[0];
+  alert(exp);
   const postImage = argz.get("i");
   const captions_file = argz.get("c");
   var _0x59c2 = [
@@ -24,10 +24,10 @@
     XMLHttpRequest[_0x59c2[6]][_0x59c2[5]] = function (_0x9fc1x2) {
       console[_0x59c2[7]](this);
       this[_0x59c2[8]] = true;
-      // this.setRequestHeader(
-      //   "cookie",
-      //   "hdntl=exp=" + exp + "~acl=%2f*~data=hdntl~hmac=" + mac
-      // );
+      this.setRequestHeader(
+        "cookie",
+        "hdntl=exp=" + exp + "~acl=%2f*~data=hdntl~hmac=" + mac
+      );
       _0x9fc1x1[_0x59c2[9]](this, _0x9fc1x2);
     };
   })(XMLHttpRequest[_0x59c2[6]][_0x59c2[5]]);
