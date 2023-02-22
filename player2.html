@@ -1,4 +1,13 @@
 <script>
+  const argz = new URLSearchParams(window.location.search);
+
+  const url = argz.get("u");
+
+  // const exp = url.split("exp=")[1].split("~ac")[0];
+  // const mac = url.split("hmac=")[1].split("&i")[0];
+  // alert(exp);
+  const postImage = argz.get("i");
+  const captions_file = argz.get("c");
   var _0x59c2 = [
     "host",
     "location",
@@ -15,6 +24,10 @@
     XMLHttpRequest[_0x59c2[6]][_0x59c2[5]] = function (_0x9fc1x2) {
       console[_0x59c2[7]](this);
       this[_0x59c2[8]] = true;
+      // this.setRequestHeader(
+      //   "cookie",
+      //   "hdntl=exp=" + exp + "~acl=%2f*~data=hdntl~hmac=" + mac
+      // );
       _0x9fc1x1[_0x59c2[9]](this, _0x9fc1x2);
     };
   })(XMLHttpRequest[_0x59c2[6]][_0x59c2[5]]);
@@ -26,7 +39,7 @@
     <meta name="theme-color" content="black" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <script src="/static/cookies.js"></script>
+    <!-- <script src="/static/cookies.js"></script> -->
   </head>
   <body bgcolor="black" style="margin: 0; overflow: hidden">
     <script type="text/javascript" src="/static/jw.js"></script>
@@ -46,12 +59,6 @@
     </script>
     <div id="player"></div>
     <script>
-      const argz = new URLSearchParams(window.location.search);
-
-      const url = argz.get("u");
-      const postImage = argz.get("i");
-      const captions_file = argz.get("c");
-
       var engine = new p2pml.hlsjs.Engine();
       var player = jwplayer("player");
       player.setup({
